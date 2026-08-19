@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brew & Bloom Coffee — handcrafted coffee and refreshing drinks delivered to your door." />
+  <title>Brew & Bloom Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Brew and Bloom home"><span class="brand-mark">☕</span><span>Brew <em>&</em> Bloom</span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#menu">Menu</a><a href="#story">Our story</a><a href="#visit">Visit us</a>
+      <button class="cart-button" id="open-cart" aria-label="Open shopping cart">Cart <span id="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy"><p class="eyebrow">Small-batch comfort, daily</p><h1>Your daily cup of <span>joy.</span></h1><p class="hero-text">Thoughtfully sourced beans, silky textures, and a little sunshine in every sip. Order your favorites for pickup or delivery.</p><div class="hero-actions"><a class="button button-dark" href="#menu">Explore the menu <span>↗</span></a><a class="text-link" href="#story">Our story <span>→</span></a></div><div class="hero-note"><span class="avatar-stack"><i>☻</i><i>☻</i><i>☻</i></span><strong>Loved by 2,000+ coffee people</strong></div></div>
+      <div class="hero-art" aria-label="Latte with latte art"><div class="sun-shape"></div><div class="coffee-cup"><div class="latte-art">☕</div></div><div class="cup-handle"></div><div class="leaf leaf-one">✦</div><div class="leaf leaf-two">✦</div><div class="stamp">EST.<br /><strong>2020</strong></div></div>
+    </section>
+
+    <section class="menu-section section-wrap" id="menu"><div class="section-heading"><div><p class="eyebrow">Made for your mood</p><h2>Find your favorite</h2></div><div class="filter-bar" role="group" aria-label="Filter menu"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="coffee">Coffee</button><button class="filter" data-filter="tea">Tea</button><button class="filter" data-filter="chilled">Chilled</button></div></div><div class="product-grid" id="product-grid"></div></section>
+
+    <section class="story section-wrap" id="story"><div class="story-card"><p class="eyebrow">A little about us</p><h2>Good coffee.<br /><span>Good energy.</span></h2><p>We believe a coffee shop should feel like your favorite corner of the world. That means warm welcomes, honest ingredients, and drinks crafted with care.</p><a class="text-link" href="#visit">Come say hello <span>→</span></a></div><div class="story-image"><div class="quote">“The best part<br />of my morning.”</div><span class="image-label">Brewed with intention</span></div></section>
+
+    <section class="visit section-wrap" id="visit"><div><p class="eyebrow">Drop by anytime</p><h2>See you soon?</h2></div><div class="visit-details"><p><strong>Mon–Fri</strong> 7am–6pm<br /><strong>Sat–Sun</strong> 8am–5pm</p><p>18 Willow Lane<br />Your neighborhood, CA</p><a class="button button-light" href="mailto:hello@brewandbloom.example">Say hello <span>↗</span></a></div></section>
+  </main>
+
+  <footer><div class="section-wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">☕</span><span>Brew <em>&</em> Bloom</span></a><p>Made with beans, joy & good company.</p><p>© <span id="year"></span> Brew & Bloom Coffee</p></div></footer>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="cart-header"><h2>Your order</h2><button id="close-cart" aria-label="Close cart">×</button></div><div class="cart-items" id="cart-items"><p class="empty-cart">Your cart is waiting for something delicious.</p></div><div class="cart-footer"><div class="total-row"><span>Total</span><strong id="cart-total">$0.00</strong></div><form id="checkout-form"><label for="customer-name">Your name</label><input id="customer-name" name="name" required placeholder="Alex Morgan" /><label for="customer-email">Email</label><input id="customer-email" name="email" type="email" required placeholder="alex@example.com" /><button class="button button-dark full-width" type="submit">Place order <span>→</span></button></form><p class="form-message" id="form-message" role="status"></p></div></aside><div class="overlay" id="overlay"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
